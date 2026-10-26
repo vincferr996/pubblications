@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vincenzo Ferrara · Publications</title>
+<meta name="description" content="Publications and conferences of Vincenzo Ferrara, PhD candidate in Industrial Engineering, University of Naples Federico II.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
+
+/* Layout: a single reading column, like a CV page; publications as entries, conferences as a dated timeline */
+:root {
+  --bg: #ffffff;
+  --surface: #f2f5f7;
+  --ink: #141a33;
+  --muted: #5b6275;
+  --line: #d1d8d8;
+  --navy: #0c1975;        /* DII institutional navy */
+  --cyan: #00a3dd;        /* DII institutional cyan (hydrogen accent on the poster) */
+  --badge-bg: #0c1975;
+  --badge-fg: #ffffff;
+  --award: #8a5a00;
+  --award-bg: #fbf1dc;
+  --f-title: "Literata", Georgia, "Times New Roman", serif;
+  --f-body: "Public Sans", "Segoe UI", Arial, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1124; --surface: #161c36; --ink: #e8ebf5; --muted: #a2a9bf; --line: #2b3354;
+    --navy: #9fb0ff; --cyan: #4cc6f0; --badge-bg: #2a3fb8; --badge-fg: #ffffff;
+    --award: #f0c46a; --award-bg: #2e2612; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1124; --surface: #161c36; --ink: #e8ebf5; --muted: #a2a9bf; --line: #2b3354;
+  --navy: #9fb0ff; --cyan: #4cc6f0; --badge-bg: #2a3fb8; --badge-fg: #ffffff;
+  --award: #f0c46a; --award-bg: #2e2612; color-scheme: dark;
+}
+body {
+  background: var(--bg); color: var(--ink);
+  font: 400 16px/1.55 var(--f-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 44rem; margin: 0 auto; padding-block: 28px 48px; display: grid; gap: 36px; }
+header { display: grid; gap: 6px; padding-bottom: 20px; border-bottom: 2px solid var(--navy); }
+.eyebrow { font: 600 12px/1.3 var(--f-body); letter-spacing: .08em; text-transform: uppercase; color: var(--cyan); }
+h1 { margin: 0; font: 600 clamp(26px, 6vw, 34px)/1.15 var(--f-title); color: var(--navy); text-wrap: balance; }
+.who { margin: 0; color: var(--muted); font-size: 15px; }
+.who strong { color: var(--ink); font-weight: 600; }
+.mail { font-family: var(--f-mono); font-size: 14px; color: var(--ink); user-select: all; }
+h2 { margin: 0 0 4px; font: 700 13px/1.3 var(--f-body); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); display: flex; align-items: baseline; gap: 10px; }
+h2 .count { font-family: var(--f-mono); font-weight: 500; letter-spacing: 0; color: var(--cyan); }
+section { display: grid; gap: 14px; }
+.pub { display: grid; gap: 6px; padding: 16px 18px; background: var(--surface); border-radius: 10px; min-width: 0; }
+.kind { font: 600 11.5px/1.3 var(--f-body); letter-spacing: .07em; text-transform: uppercase; color: var(--cyan); }
+.pub h3 { margin: 0; font: 500 18px/1.35 var(--f-title); color: var(--ink); text-wrap: pretty; }
+.authors { margin: 0; font-size: 14.5px; color: var(--muted); }
+.authors b { color: var(--ink); font-weight: 600; }
+.venue { margin: 0; font-size: 14.5px; }
+.venue em { font-style: italic; }
+.doi { font-family: var(--f-mono); font-size: 13.5px; color: var(--navy); overflow-wrap: anywhere; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.doi:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; border-radius: 3px; }
+ol.timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.ev { display: grid; grid-template-columns: 5.6rem 1fr; gap: 14px; padding: 14px 0; border-top: 1px solid var(--line); }
+.ev:last-child { border-bottom: 1px solid var(--line); }
+.when { font-family: var(--f-mono); font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 2px; }
+.when b { display: block; font-size: 15px; color: var(--ink); font-weight: 500; }
+.what { display: grid; gap: 6px; min-width: 0; }
+.what h3 { margin: 0; font: 600 16px/1.35 var(--f-body); }
+.what p { margin: 0; font-size: 14.5px; color: var(--muted); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { font: 600 12px/1 var(--f-body); padding: 5px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+.tag.speaker { background: var(--badge-bg); color: var(--badge-fg); border-color: var(--badge-bg); }
+.tag.award { background: var(--award-bg); color: var(--award); border-color: transparent; }
+footer { font-size: 13px; color: var(--muted); }
+@media (max-width: 420px) {
+  .ev { grid-template-columns: 1fr; gap: 6px; }
+  .when b { display: inline; margin-right: 6px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="eyebrow">PhD International Intensive School · DII4ET</span>
+    <h1>Publications and conferences, 2024–2026</h1>
+    <p class="who"><strong>Vincenzo Ferrara</strong> · PhD candidate in Industrial Engineering, XXXIX cycle · Department of Industrial Engineering, University of Naples Federico II</p>
+    <p class="who">Contact: <span class="mail">vincenzo.ferrara3@unina.it</span></p>
+  </header>
+
+  <section aria-labelledby="pubs">
+    <h2 id="pubs">Publications <span class="count">4</span></h2>
+
+    <article class="pub">
+      <span class="kind">Conference paper · 81st ATI Congress 2026 · accepted, in press</span>
+      <h3>Parametric Characterization of a PBI-Based HT-PEM Fuel Cell Model in MATLAB/Simulink</h3>
+      <p class="authors">Palomba M., Gambardella A., <b>Ferrara V.</b>, Acunzo F.G.</p>
+      <p class="venue"><em>81st ATI Annual Congress</em>, Milan, Italy, 9–11 September 2026.</p>
+    </article>
+
+    <article class="pub">
+      <span class="kind">Conference paper · ASME Turbo Expo 2026</span>
+      <h3>Hydrogen-Enriched Methane Combustion in a 3 kW Micro Gas Turbine: A CFD Investigation with Experimental Validation</h3>
+      <p class="authors"><b>Ferrara V.</b>, Cameretti M.C., De Robbio R., Pappa A., Thielens V., De Paepe W.</p>
+      <p class="venue"><em>Proceedings of ASME Turbo Expo 2026: Turbomachinery Technical Conference and Exposition</em>, Milan, Italy, 15–19 June 2026. Paper GT2026-177136.</p>
+      <a class="doi" href="https://doi.org/10.1115/GT2026-177136" target="_blank" rel="noopener">doi:10.1115/GT2026-177136</a>
+    </article>
+
+    <article class="pub">
+      <span class="kind">Conference paper · AIAA/CEAS Aeroacoustics 2026</span>
+      <h3>Factorized Flame–Acoustic Coupling with URANS-Identified FTFs for Thermoacoustic Stability of an Aeronautical Combustor with Hydrogen Fuel</h3>
+      <p class="authors"><b>Ferrara V.</b>, Barbarino M., Cameretti M.C., De Robbio R., Tuccillo R.</p>
+      <p class="venue"><em>32nd AIAA/CEAS Aeroacoustics Conference</em>, Brussels, Belgium, 2026. AIAA Paper 2026-3521.</p>
+      <a class="doi" href="https://doi.org/10.2514/6.2026-3521" target="_blank" rel="noopener">doi:10.2514/6.2026-3521</a>
+    </article>
+
+    <article class="pub">
+      <span class="kind">Journal article · Aerospace (MDPI)</span>
+      <h3>Performance and Emissions Evaluation of a Turbofan Burner with Hydrogen Fuel</h3>
+      <p class="authors">Cameretti M.C., De Robbio R., <b>Ferrara V.</b>, Tuccillo R.</p>
+      <p class="venue"><em>Aerospace</em> 12(3), 231, 2025.</p>
+      <a class="doi" href="https://doi.org/10.3390/aerospace12030231" target="_blank" rel="noopener">doi:10.3390/aerospace12030231</a>
+    </article>
+  </section>
+
+  <section aria-labelledby="confs">
+    <h2 id="confs">Conferences <span class="count">5</span></h2>
+    <ol class="timeline">
+      <li class="ev">
+        <div class="when"><b>Sep 2026</b>9–11 Sep</div>
+        <div class="what">
+          <h3>81st ATI Annual Congress</h3>
+          <p>Milan, Italy. Talk and poster on the paper “Parametric Characterization of a PBI-Based HT-PEM Fuel Cell Model in MATLAB/Simulink”.</p>
+          <div class="tags"><span class="tag speaker">Speaker</span><span class="tag">Poster</span></div>
+        </div>
+      </li>
+      <li class="ev">
+        <div class="when"><b>Jun 2026</b>15–19 Jun</div>
+        <div class="what">
+          <h3>ASME Turbo Expo 2026</h3>
+          <p>Milan, Italy. Paper GT2026-177136.</p>
+          <div class="tags"><span class="tag speaker">Speaker</span><span class="tag">Paper</span></div>
+        </div>
+      </li>
+      <li class="ev">
+        <div class="when"><b>May 2026</b>26–29 May</div>
+        <div class="what">
+          <h3>32nd AIAA/CEAS Aeroacoustics Conference</h3>
+          <p>Brussels, Belgium. Paper AIAA 2026-3521.</p>
+          <div class="tags"><span class="tag speaker">Speaker</span><span class="tag">Paper</span></div>
+        </div>
+      </li>
+      <li class="ev">
+        <div class="when"><b>Sep 2025</b>10–12 Sep</div>
+        <div class="what">
+          <h3>80th ATI Annual Congress</h3>
+          <p>Benevento, Italy. Poster presentation.</p>
+          <div class="tags"><span class="tag">Poster</span><span class="tag award">AIMSEA Best Poster Award · 2nd place</span></div>
+        </div>
+      </li>
+      <li class="ev">
+        <div class="when"><b>Sep 2024</b>4–6 Sep</div>
+        <div class="what">
+          <h3>79th ATI Annual Congress</h3>
+          <p>Genoa, Italy. Poster presentation.</p>
+          <div class="tags"><span class="tag">Poster</span></div>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <footer>Companion page to the poster “Modeling of thermo-chemical and thermo-acoustic phenomena in low-emission combustors for aircraft propulsion systems fueled by hydrogen”.</footer>
+</div>
+</body>
+</html>
